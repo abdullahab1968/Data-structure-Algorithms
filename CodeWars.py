@@ -103,4 +103,21 @@ def duplicate_encode(word):
         i+=1    
  
     return new_word    
-print(duplicate_encode('Hello'))
+
+####6
+#Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+#or example, the square matrix  is shown below:
+def diagonalDifference(arr):
+    # Write your code here
+    left_right=0
+    right_left=0
+    for i in range(len(arr)):
+        left_right+=arr[i][i]
+        right_left+=arr[i][len(arr)-i-1] 
+    result=left_right-right_left
+    if result<0:
+        return -1*result
+    else:
+        return result    
+####7
+#         
