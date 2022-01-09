@@ -120,4 +120,15 @@ def diagonalDifference(arr):
     else:
         return result    
 ####7
-#         
+# counting the number of every character in a string 
+# using dictionary
+def str_dict(str):
+    dict={}
+    for ch in str:
+     if ch in dict:
+         dict[ch]+=1
+     else:
+         dict[ch]=1   
+    return dict         
+
+    

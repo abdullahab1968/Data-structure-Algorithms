@@ -134,8 +134,9 @@ def merge_sort(arr):
             k += 1
 
 
-arr=[20,10,30,15]   
-merge_sort(arr)
-print(arr)
+# arr=[20,10,30,15]   
+# merge_sort(arr)
+# print(arr)
 
 #6) Quick sort:
+
