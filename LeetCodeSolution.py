@@ -140,3 +140,48 @@ def lengthOfLongestSubstring( s):
           return max(res, len(s)-start) 
 
 # print("result: ",lengthOfLongestSubstring("bbtablud"))
+
+
+
+####7) Linked List Easy
+# Given head which is a reference node to a singly-linked list.
+#  The value of each node in the linked list is either 0 or 1. 
+# The linked list holds the binary representation of a number.
+
+# Return the decimal value of the number in the linked list.
+def getDecimalValue( head):
+        current=head
+        decimal_num=0
+        while current:
+            #we do shift riht by multiply by 2 and plus the new digit
+             decimal_num=2*decimal_num+current.val
+             current=current.next
+        return decimal_num
+
+
+
+# ####8)Arrays Easy
+# You are given two integer arrays nums1 and nums2, sorted in non-decreasing order,
+#  and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+
+# Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+
+# The final sorted array should not be returned by the function, but instead be stored inside the array nums1.
+#  To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged,
+#  and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+def merge(nums1, m, nums2, n):
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        if len(nums2)==0:
+            return
+        i=0
+        while(i<n):
+            nums1[m+i]=nums2[i]
+            j=m+i
+            while nums1[j]<nums1[j-1] and j>0:
+                nums1[j-1],nums1[j]=nums1[j],nums1[j-1]
+                j-=1
+            print(nums1)
+            i+=1    
+            
